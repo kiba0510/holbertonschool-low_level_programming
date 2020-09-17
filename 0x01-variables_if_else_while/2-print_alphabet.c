@@ -6,9 +6,13 @@
  */
 int main(void)
 {
-for (int x = 'A'; x <= 'Z'; x++)
+char x;
+for (x = 'a'; x <= 'z'; x++)
 {
-putchar(lower_x));
+putchar(x);
+}
+{
+putchar('\n');
 }
 return (0);
 }
