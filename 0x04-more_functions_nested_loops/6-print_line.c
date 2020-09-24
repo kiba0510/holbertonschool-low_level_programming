@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- *print_line - print the value of n 
- *@a: entry point
+ *print_line - print the value of n
+ *@n: entry point
  *
  */
 void print_line(int n)
@@ -12,7 +12,7 @@ void print_line(int n)
 	{
 	for (a = 0; a < n ; a++)
 	{
-        _putchar('_');
+		_putchar('_');
 	}
 	_putchar('\n');
 	}
