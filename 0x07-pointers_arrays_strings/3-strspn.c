@@ -2,7 +2,7 @@
 /**
  *_strspn - get length of a prefix substring
  *@s: string
- *@accept: bytes being compared 
+ *@accept: bytes being compared
  *Return: bytes to get to accept
  */
 unsigned int _strspn(char *s, char *accept)
