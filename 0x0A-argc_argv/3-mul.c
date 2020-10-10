@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- *
- *
- *
- *
+ *main - multiply two numbers
+ *@argc: number of argument
+ *@argv: arguments entered
+ *Return: zero
  */
 int main(int argc, char *argv[])
 {
