@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *_strlen - gives the length of the string 
+ *_strlen - gives the length of the string
  *@s: counter for the string
  *Return: length of the string as integer
  */
@@ -35,7 +35,6 @@ char *_strdup(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		dest[i] = str[i];
-	
 
 	return (dest);
 }
