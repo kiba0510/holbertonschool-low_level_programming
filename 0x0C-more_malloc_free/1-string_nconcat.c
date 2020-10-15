@@ -33,14 +33,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	size1 = _strlen(s1);
 	size2 = _strlen(s2);
-
 	if (n > size2 - 1)
-	n = size2 - 1;
+		n = size2 - 1;
 
 	dest = (char *)malloc((size1 + n) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
-
 	if (size1 == 1 && size2 == 1)
 		return (NULL);
 
