@@ -1,13 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- *_strlen - gives the length value of a string
- *@s: string to count
- *Return: length of the string as an integer
- */
-
+ * _strlen - returns the length of the string
+ * @s: input string to count
+ * Description: returns the length of a given string
+ * Return: length of string as int
+ **/
 int _strlen(char *s)
 {
 	int i;
@@ -16,13 +15,13 @@ int _strlen(char *s)
 		;
 	return (i + 1);
 }
-
 /**
- *argstostr - concatenates arguments of a given program
- *@a: number of arguments
- *@av: arguments pointer to string
- *Return: pointer to string, NULL if fails
- */
+ * argstostr - concatenates all arguments of program
+ * @ac: number of arguments
+ * @av: arguments, pointer to strings
+ * Description: concatenate all args to one string, separated by \n
+ * Return: pointer to string, NULL if fails
+ **/
 char *argstostr(int ac, char **av)
 {
 	char *dest;
