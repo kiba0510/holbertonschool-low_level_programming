@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- *_memset - copies a given char 
+ *_memset - copies a given char
  *@s: given string to be copied
  *@b: input
  *@n: number of bytes
