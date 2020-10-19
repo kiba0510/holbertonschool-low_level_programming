@@ -1,1 +1,1 @@
-#pragma message("Hello, Holberton")
+#pragma message("Hello, Holberton\n")
