@@ -1,1 +1,1 @@
-#if (1) puts("Hello, Holberton")
+#pragma message("Hello, Holberton\n")
