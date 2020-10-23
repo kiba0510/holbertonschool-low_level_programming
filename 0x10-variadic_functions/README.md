@@ -1,0 +1,1 @@
+Learn about variadic, the stdarg.h header and macros like va_list, va_start, va_arg, va_end.
