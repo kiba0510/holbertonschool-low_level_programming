@@ -1,51 +1,78 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "variadic_functions.h"
 /**
- *print_all - print char, int, float and string
- *@format: a list of types of arguments
+ * _printchar - print all the char args
+ * @args: args passed to the function
+ * Return: void function
+ */
+void _printchar(va_list args)
+{
+	printf("%c", va_arg(args, int));
+}
+/**
+ * _printint - print all the int args
+ * @args: args passed to the function
+ * Return: void function
+ */
+void _printint(va_list args)
+{
+	printf("%d", va_arg(args, int));
+}
+/**
+ * _printfloat - print all the float args
+ * @args: args passed to the function
+ * Return: void function
+ */
+void _printfloat(va_list args)
+{
+	printf("%f", va_arg(args, double));
+}
+/**
+ * _printstring - print all the string args
+ * @args: args passed to the function
+ * Return: void function
+ */
+void _printstring(va_list args)
+{
+	char *s;
+
+	s = va_arg(args, char *);
+	printf("%s", s == NULL ? "(nil)" : s);
+}
+/**
+ * print_all - print all the arguments according with the format
+ * @format: format to print
+ * Return: void function
  */
 void print_all(const char * const format, ...)
 {
-	va_list valist;
-	unsigned int j = 0, start = 0;
-	char *p;
+	unsigned int a, b;
+	va_list args;
+	char *s = "";
 
-	va_start(valist, format);
-	while (format && format[j] != '\0')
+	fo charform[] = {
+		{"c", _printchar},
+		{"i", _printint},
+		{"f", _printfloat},
+		{"s", _printstring},
+		{NULL, NULL}
+	};
+	va_start(args, format);
+	a = 0;
+	while (format && format[a])
 	{
-		switch (format[j])
+		b = 0;
+		while (charform[b].op != NULL)
 		{
-		case 'c':
-			switch (start)
-			{ case 1: printf(", "); }
-			start = 1;
-			printf("%c", va_arg(valist, int));
-			break;
-		case 'i':
-			switch (start)
-			{ case 1: printf(", "); }
-			start = 1;
-			printf("%i", va_arg(valist, int));
-			break;
-		case 'f':
-			switch (start)
-			{ case 1: printf(", "); }
-			start = 1;
-			printf("%f", va_arg(valist, double));
-			break;
-		case 's':
-			switch (start)
-			{ case 1: printf(", "); }
-			start = 1;
-			p = va_arg(valist, char*);
-			if (p)
-			{ printf("%s", p);
-			break; }
-			printf("%p", p);
-			break; }
-		j++;
+			if (format[a] == charform[b].op[0])
+			{
+				printf("%s", s);
+				charform[b].f(args);
+				s = ", ";
+			}
+			b++;
+		}
+		a++;
 	}
 	printf("\n");
-	va_end(valist);
+	va_end(args);
 }
