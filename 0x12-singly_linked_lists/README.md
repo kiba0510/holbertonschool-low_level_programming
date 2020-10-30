@@ -2,7 +2,7 @@
 
 Learning how to use singly linked lists
 
-## Functions
+## Functions :hammer_and_wrench:
 
 This is a list of the used functions in this _proyect_ :
 * print_list   - _Prints_ all the elements of a linked list.
