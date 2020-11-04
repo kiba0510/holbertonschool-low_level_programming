@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- *int poplistin - Deletes the first element of a list
+ *int_poplistin - Deletes the first element of a list
  *@head: Pointer to the head of the list
  *Return: The value of the deleted node
  */
