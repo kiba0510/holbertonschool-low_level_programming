@@ -10,23 +10,18 @@
  * -1 if value is not present in an array or if its NULL
  **/
 
-int linear_search(int *array, int size_t, int value)
+int linear_search(int *array, size_t size, int value)
 {
-    size_t index = 0;
+    size_t i = 0;
 
-    if (!array || !size)
-    {
+    if (!array)
         return (-1);
-    }
-
-    while (index < size)
+    while (i < size)
     {
-        printf("Value checked array[%lu] = [%d]\n", index, array[index]);
-        if (array[index] == value)
-        {
-            return (index);
-        }
-        index++;
+        printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+        if (array[i] == value)
+            return (i);
+        i++;
     }
     return (-1);
 }
